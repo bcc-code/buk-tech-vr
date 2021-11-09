@@ -1,0 +1,190 @@
+# Common settings that generally should always be used with your language specific settings
+
+# Auto detect text files and perform LF normalization
+*          text=auto
+
+#
+# The above will handle all files NOT found below
+#
+
+# Documents
+*.bibtex   text diff=bibtex
+*.doc      diff=astextplain
+*.DOC      diff=astextplain
+*.docx     diff=astextplain
+*.DOCX     diff=astextplain
+*.dot      diff=astextplain
+*.DOT      diff=astextplain
+*.pdf      diff=astextplain
+*.PDF      diff=astextplain
+*.rtf      diff=astextplain
+*.RTF      diff=astextplain
+*.md       text diff=markdown
+*.tex      text diff=tex
+*.adoc     text
+*.textile  text
+*.mustache text
+*.csv      text
+*.tab      text
+*.tsv      text
+*.txt      text
+*.sql      text
+
+# Graphics
+
+# Scripts
+*.bash     text eol=lf
+*.fish     text eol=lf
+*.sh       text eol=lf
+*.zsh      text eol=lf
+# These are explicitly windows files and should use crlf
+*.bat      text eol=crlf
+*.cmd      text eol=crlf
+*.ps1      text eol=crlf
+
+# Serialisation
+*.json     text
+*.toml     text
+*.xml      text
+*.yaml     text
+*.yml      text
+
+# Text files where line endings should be preserved
+*.patch    -text
+
+#
+# Exclude files from exporting
+#
+
+.gitattributes export-ignore
+.gitignore     export-ignore
+.gitkeep       export-ignore
+
+# Unity
+*.cginc              text
+*.cs                 text diff=csharp
+*.shader             text
+
+# Unity YAML
+*.mat                merge=unityyamlmerge eol=lf
+*.anim               merge=unityyamlmerge eol=lf
+*.unity              merge=unityyamlmerge eol=lf
+*.prefab             merge=unityyamlmerge eol=lf
+*.asset              merge=unityyamlmerge eol=lf
+*.meta               merge=unityyamlmerge eol=lf
+*.controller         merge=unityyamlmerge eol=lf
+
+# "physic" for 3D but "physics" for 2D
+*.physicMaterial2D   merge=unityyamlmerge eol=lf
+*.physicMaterial     merge=unityyamlmerge eol=lf
+*.physicsMaterial2D  merge=unityyamlmerge eol=lf
+*.physicsMaterial    merge=unityyamlmerge eol=lf
+
+# Using Git LFS
+# Add diff=lfs merge=lfs to the binary files
+
+# Unity LFS
+*.cubemap            diff=lfs merge=lfs binary
+*.unitypackage       diff=lfs merge=lfs binary
+
+# 3D models
+*.3dm                diff=lfs merge=lfs binary
+*.3ds                diff=lfs merge=lfs binary
+*.blend              diff=lfs merge=lfs binary
+*.c4d                diff=lfs merge=lfs binary
+*.collada            diff=lfs merge=lfs binary
+*.dae                diff=lfs merge=lfs binary
+*.dxf                diff=lfs merge=lfs binary
+*.FBX                diff=lfs merge=lfs binary
+*.fbx                diff=lfs merge=lfs binary
+*.jas                diff=lfs merge=lfs binary
+*.lws                diff=lfs merge=lfs binary
+*.lxo                diff=lfs merge=lfs binary
+*.ma                 diff=lfs merge=lfs binary
+*.max                diff=lfs merge=lfs binary
+*.mb                 diff=lfs merge=lfs binary
+*.obj                diff=lfs merge=lfs binary
+*.ply                diff=lfs merge=lfs binary
+*.skp                diff=lfs merge=lfs binary
+*.stl                diff=lfs merge=lfs binary
+*.ztl                diff=lfs merge=lfs binary
+
+# Audio
+*.aif                diff=lfs merge=lfs binary
+*.aiff               diff=lfs merge=lfs binary
+*.it                 diff=lfs merge=lfs binary
+*.mod                diff=lfs merge=lfs binary
+*.mp3                diff=lfs merge=lfs binary
+*.ogg                diff=lfs merge=lfs binary
+*.s3m                diff=lfs merge=lfs binary
+*.wav                diff=lfs merge=lfs binary
+*.xm                 diff=lfs merge=lfs binary
+
+# Video
+*.asf                diff=lfs merge=lfs binary
+*.avi                diff=lfs merge=lfs binary
+*.flv                diff=lfs merge=lfs binary
+*.mov                diff=lfs merge=lfs binary
+*.mp4                diff=lfs merge=lfs binary
+*.mpeg               diff=lfs merge=lfs binary
+*.mpg                diff=lfs merge=lfs binary
+*.ogv                diff=lfs merge=lfs binary
+*.wmv                diff=lfs merge=lfs binary
+
+# Images
+*.bmp                diff=lfs merge=lfs binary
+*.exr                diff=lfs merge=lfs binary
+*.gif                diff=lfs merge=lfs binary
+*.hdr                diff=lfs merge=lfs binary
+*.ico                diff=lfs merge=lfs binary
+*.iff                diff=lfs merge=lfs binary
+*.jpeg               diff=lfs merge=lfs binary
+*.jpg                diff=lfs merge=lfs binary
+*.pict               diff=lfs merge=lfs binary
+*.png                diff=lfs merge=lfs binary
+*.psd                diff=lfs merge=lfs binary
+*.svg                text
+*.tga                diff=lfs merge=lfs binary
+*.tif                diff=lfs merge=lfs binary
+*.tiff               diff=lfs merge=lfs binary
+*.eps                diff=lfs merge=lfs binary
+
+# Compressed Archive
+*.7z                 diff=lfs merge=lfs binary
+*.bz2                diff=lfs merge=lfs binary
+*.gz                 diff=lfs merge=lfs binary
+*.rar                diff=lfs merge=lfs binary
+*.tar                diff=lfs merge=lfs binary
+*.tgz                diff=lfs merge=lfs binary
+*.zip                diff=lfs merge=lfs binary
+
+# Compiled Dynamic Library
+*.dll                diff=lfs merge=lfs binary
+*.pdb                diff=lfs merge=lfs binary
+*.so                 diff=lfs merge=lfs binary
+
+# Fonts
+*.otf                diff=lfs merge=lfs binary
+*.ttf                diff=lfs merge=lfs binary
+
+# Executable/Installer
+*.apk                diff=lfs merge=lfs binary
+*.exe                diff=lfs merge=lfs binary
+
+# Documents
+*.pdf                diff=lfs merge=lfs binary
+
+# ETC
+*.a                  diff=lfs merge=lfs binary
+*.rns                diff=lfs merge=lfs binary
+*.reason             diff=lfs merge=lfs binary
+
+# Collapse Unity-generated files on GitHub
+*.asset              linguist-generated
+*.mat                linguist-generated
+*.meta               linguist-generated
+*.prefab             linguist-generated
+*.unity              linguist-generated
+
+# Spine export file for Unity
+*.skel.bytes         diff=lfs merge=lfs binary
