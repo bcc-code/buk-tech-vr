@@ -16,7 +16,7 @@ namespace Buk
     // Mouse sensitivity
     public Vector2 sensitivity = new Vector2(1f, 1f);
     // The camera for the player.
-    public new Camera camera;
+    public Camera camera;
     // Maximum angle that you can look down
     public float lookDownLimit = 90f;
     // Maximum angle that you can look up

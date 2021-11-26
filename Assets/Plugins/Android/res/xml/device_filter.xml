@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+  <!-- Nintendo Joycons (Left and Right) -->
+  <usb-device vendor-id="1406" product-id="8198"/>
+  <usb-device vendor-id="1406" product-id="8199"/>
+</resources>

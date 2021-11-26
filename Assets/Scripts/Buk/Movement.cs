@@ -21,7 +21,7 @@ namespace Buk
     public float jumpVelocity = 3f;
     public float maxVelocity = 15f;
 
-    private new CapsuleCollider collider;
+    private CapsuleCollider collider;
     private Rigidbody body;
     private bool onGround = false;
 
