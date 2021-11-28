@@ -33,5 +33,7 @@ EditorBuildSettings:
     path: Assets/BUK/Scenes/6DOF/6DOFOnline.unity
     guid: 738244f7a97fa92418a65bfccf7005d1
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 129ab8fe10dd13424838b1a3e1fd58a3, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 6496f0fb7715743e18ac1cad4b3a526e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f509293a0aa837ccebd7864cdd938a10, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 7a311c111a61c4491a18fcfae5d961bb, type: 2}
