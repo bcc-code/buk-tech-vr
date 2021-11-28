@@ -6,11 +6,15 @@ namespace Buk
   public class Movement : MonoBehaviour
   {
     // Two axis movement forward/backward and left/right
+    [Header("Movement")]
     public InputAction move;
     // Single button to jump
+    [Header("Jump")]
     public InputAction jump;
     // Single axis rotation left/right
+    [Header("Rotate")]
     public InputAction rotate;
+    [Header("Speed and acceleration")]
     public float moveAcceleration = 5f;
     public float strafeAcceleration = 3f;
     public float rotateVelocity = 1f;
