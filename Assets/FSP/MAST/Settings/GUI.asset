@@ -20,11 +20,11 @@ MonoBehaviour:
     tintColor: {r: 0.23834105, g: 0.389676, b: 0.49056602, a: 0.15686275}
   palette:
     bgColor: 0
-    snapshotCameraPitch: 225
+    snapshotCameraPitch: 45
     snapshotCameraYaw: 30
     overwriteThumbnails: 0
   toolbar:
-    selectedDrawToolIndex: 2
+    selectedDrawToolIndex: -1
     selectedPaintToolIndex: 0
     position: 0
     scale: 1
