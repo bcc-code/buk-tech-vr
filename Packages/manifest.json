@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.google.xr.cardboard": "git@github.com:googlevr/cardboard-xr-plugin.git",
+    "com.google.xr.cardboard": "https://github.com/googlevr/cardboard-xr-plugin.git",
     "com.unity.ide.vscode": "1.2.4",
     "com.unity.inputsystem": "1.0.2",
     "com.unity.mobile.android-logcat": "1.2.3",

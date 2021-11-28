@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.google.xr.cardboard": {
-      "version": "git@github.com:googlevr/cardboard-xr-plugin.git",
+      "version": "https://github.com/googlevr/cardboard-xr-plugin.git",
       "depth": 0,
       "source": "git",
       "dependencies": {
