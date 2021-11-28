@@ -23,6 +23,6 @@ MonoBehaviour:
   previousPaintToolIndex: -1
   selectedPaintToolIndex: -1
   selectedMaterialIndex: -1
-  materialPath: Assets/FSP/Modular Terrain
+  materialPath: Assets/FSP/Modular Dungeon
   selectedMaterialPaletteFolderIndex: 0
   materialPaletteColumnCount: 6
