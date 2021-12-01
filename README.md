@@ -67,7 +67,7 @@ Once you're logged in, you'll be prompted to install Unity. Install the latest 2
 
 ### Install build platform support
 
-Once the download is completed, in the Unity hub left-hand menu, click _Installs_. You'll see version 2020.3.22f1 there. Click the gear icon in the top-right corner of that block.
+Once the download is completed, in the Unity hub left-hand menu, click _Installs_. You'll see version 2020.3.23f1 there. Click the gear icon in the top-right corner of that block.
 
 ![click the gear icon](./doc/edit-install.svg)
 
@@ -93,7 +93,9 @@ It might take some time to download and install necessary packages.
 
 ![open this project for editing](./doc/open-project.png)
 
+### Play in the editor
 
+If you press the play icon in the editor, you should enter the camera viewpoint in non-VR mode and can run around with WASD, look with the mouse, and jump using space.
 
 ### Build and run the game
 
@@ -106,7 +108,7 @@ Once the unity editor is open:
 3. If Android is not selected, click _Android_ and click _Switch Platform_, and wait for it to finish.
 4. In the _Run Device_ drop-down, select your phone.
 5. Click _Build and Run_
-6. Save the app as `tech.buk.vr.apk`
+6. Save the app as `vr.tech.buk.apk`.
 7. Wait a long time until the app opens on your phone
 ![build the app and run it on your Android phone](./doc/build-and-run.svg)
 
@@ -114,18 +116,37 @@ If everything went well, you'll be prompted to allow camera access and to scan a
 
 Now you should see two eye viewports that show the world and you can look around by moving the phone.
 
+If you have a bluetooth controller that you can connect to the phone, you can probably walk around too.
+
 ![blank vr game](./doc/vr-game.png)
 
-**Note:** The cross and gear icons don't do anything yet
+**Note:** You can use the cross to exit VR mode, and the gear icon to scan a QR code.
+
+### World building
+
+To erase the world and build your own world:
+- First erase the existing world: Delete the _MAST_Holder_ object from the scene hierarchy.
+- Click _Tools_ » _MAST_ » _Open MAST Window_
+- In the MAST window, click the folder icon in the bottom left corner to load prefabs.
+- Choose one of the folders in _Assets/FSP/_ folder. For example _Modular Terrain_ and click _Open_
+- Click one of the loaded prefabs in the MAST window to select it.
+- Click in the world view to place a copy of the prefab.
+- Now you can build your own world!
+
+#### MAST Hotkeys
+
+To change the height of the drawing grid, press <kbd>Shift</kbd><kbd>W</kbd> and <kbd>Shift</kbd><kbd>S</kbd>.  
+To rotate what you are drawing press <kbd>Space</kbd>.  
+To mirror what you are drawing press <kbd>F</kbd>.  
+To hide the MAST grid, press <kbd>G</kbd>.  
 
 _You have reached the temporary end of the tutorial. We are not finished writing this part yet!_
 
 ## To be added
 
-- Input system with controller support
+- Improved character control
 - Multiplayer
 - Lobby and mini-game mechanism
-- World building
 
 ## Attributions
 
