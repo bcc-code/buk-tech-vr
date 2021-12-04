@@ -33,8 +33,7 @@ namespace Buk
       if (delta != Vector2.zero) {
         this.transform.rotation *= Quaternion.AngleAxis(delta.x * sensitivity.x, Vector3.up);
         if (this.camera != null) {
-          // Mouse Y-axis is negative compared to camera rotation X-axis, so we use -delta.y
-          this.camera.transform.localRotation *= Quaternion.AngleAxis(-delta.y * sensitivity.y, Vector3.right);
+          this.camera.transform.localRotation *= Quaternion.AngleAxis(delta.y * sensitivity.y, Vector3.left);
           // The angle between where we're looking and straight forward.
           // Since the camera only rotates over its local x-axis, this is on that axis.
           var offForwardAngle = Quaternion.Angle(this.camera.transform.localRotation, forward);
