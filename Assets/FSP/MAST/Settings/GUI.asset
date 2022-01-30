@@ -25,6 +25,6 @@ MonoBehaviour:
     overwriteThumbnails: 0
   toolbar:
     selectedDrawToolIndex: -1
-    selectedPaintToolIndex: 0
+    selectedPaintToolIndex: -1
     position: 0
     scale: 1

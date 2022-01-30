@@ -21,7 +21,7 @@ MonoBehaviour:
     step: {x: 0, y: 90, z: 0}
   overridePrefabRaycast: 0
   placementRaycast:
-    useRaycast: 0
+    useRaycast: 1
     direction: 1
     startOffset: {x: 0, y: 0, z: 0}
   overridePrefabRandomizer: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: InterfaceState
   m_EditorClassIdentifier: 
   selectedInterfaceTab: 0
-  gridExists: 1
+  gridExists: 0
   previousBuildToolIndex: -1
   selectedBuildToolIndex: -1
   selectedPrefabIndex: -1
