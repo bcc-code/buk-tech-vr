@@ -10,7 +10,7 @@ namespace Buk {
     }
 
     private void Orientation(InputAction.CallbackContext context) {
-      gameObject.transform.localRotation = context.ReadValue<Quaternion>();
+      transform.localRotation = context.ReadValue<Quaternion>();
     }
   }
 }

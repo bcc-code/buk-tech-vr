@@ -1,0 +1,42 @@
+Current Landscape Name:Guereins
+Location longitude: 4.463900089263916
+Location latitude: 51.58720016479492
+Location altitude: 0
+Location name: Oud Gastel, Netherlands
+Location planet: Earth
+Location local-sidereal-time: 2.387684019329195
+Location Bortle Index: 2
+North panel luminance: 0
+East panel luminance: 0
+South panel luminance: 0
+West panel luminance: 0
+Top panel luminance: 0
+Bottom panel luminance: 0
+Stellarium Skybox lighting data:
+Vertical FoV: 90
+Horizontal FoV: 121.28449291441746
+Date (UTC): 2022-01-30T17:25:42
+Date: 2022-01-30T18:25:42
+JD: 2459610.22618081
+Sun Azimuth: 253.29697929426067
+Sun Altitude: -9.169568714084289
+Sun Magnitude: -26.774633407592773
+Sun Magnitude (after extinction): -26.774633407592773
+Sun Longitude: 310.7920984869098
+Sun Size: 0.5411676315143624
+Moon Azimuth: 263.1784409264437
+Moon Altitude: -29.110380750919912
+Moon Phase: 0.036568060517311096
+Moon Phase angle: 157.95111146907752
+Moon illumination: 3.656805992126465
+Moon Magnitude: -6.848299026489258
+Moon Magnitude (after extinction): -6.848299026489258
+Moon Longitude: 289.2358626309771
+Moon Size: 0.5447893161402636
+Venus Azimuth: 278.8494062249986
+Venus Altitude: -27.67984908474857
+Venus Magnitude: -4.795844554901123
+Venus Magnitude (after extinction): -4.795844554901123
+Venus Longitude: 281.114688508462
+Atm. Luminance: 0.0010000000474974513
+Landscape Brightness: 0.02500000037252903
