@@ -1,4 +1,4 @@
-# BUK Tech VR at Romjulscamp 2021
+# BUK Tech VR at Påskecamp 2022
 
 During this activity you're going to build your own virtual world in Unity 3D, put it on your Android phone, and then dive into it using Google Cardboard VR glasses.
 
