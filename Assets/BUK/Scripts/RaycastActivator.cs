@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,22 +11,51 @@ namespace Buk
   public class RaycastActivator : MonoBehaviour
   {
     // Maximum raycast distance
+    [Header("Maximum raycast distance")]
     public float LimitDistance = 12f;
-
-    private InputAction activateAction;
+    public InputAction activateAction;
+    private IEnumerable<IActivateable> currentTarget;
 
     public void Start()
     {
       if (activateAction != null)
       {
-        activateAction.performed += ctx =>
+        activateAction.started += ctx =>
         {
-          if (Physics.Raycast(transform.position, transform.forward, out var detected, LimitDistance))
+          if (TryDetectTarget(out currentTarget))
           {
-            detected.collider.gameObject.GetComponent<IActivateable>()?.Activate(gameObject);
+            foreach (var activator in currentTarget) {
+              activator.ActivateStart(gameObject);
+            }
           }
         };
+        activateAction.performed += ctx =>
+        {
+          if (currentTarget != null)
+          {
+            foreach (var activator in currentTarget) {
+              activator.ActivateEnd(gameObject);
+            }
+          }
+        };
+        activateAction.Enable();
       }
+    }
+
+    private bool TryDetectTarget(out IEnumerable<IActivateable> targets)
+    {
+      if (Physics.Raycast(transform.position, transform.forward, out var detected, LimitDistance))
+      {
+        targets = detected.collider.gameObject.GetComponentsInParent(typeof(Component))
+          .SelectMany(component => component is IActivateable activateable
+            ? new [] { activateable }
+            : Enumerable.Empty<IActivateable>());
+      }
+      else
+      {
+        targets = Enumerable.Empty<IActivateable>();
+      }
+      return targets.Any();
     }
   }
 }

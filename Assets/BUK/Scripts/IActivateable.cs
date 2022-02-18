@@ -4,6 +4,7 @@ namespace Buk
 {
   public interface IActivateable
   {
-    void Activate(GameObject sender);
+    void ActivateStart(GameObject sender);
+    void ActivateEnd(GameObject sender);
   }
 }

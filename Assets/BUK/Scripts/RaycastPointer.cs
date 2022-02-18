@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 namespace Buk
@@ -31,7 +30,6 @@ namespace Buk
       }
       else
       {
-        Debug.Log("Found nothing");
         // Unregister old target (if any)
         target?.PointerExit(gameObject);
         target = null;
