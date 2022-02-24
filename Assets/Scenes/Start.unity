@@ -6214,21 +6214,21 @@ Transform:
   - {fileID: 2063892071}
   - {fileID: 1132357076}
   - {fileID: 1025479199}
-  - {fileID: 1234141462}
-  - {fileID: 2056221273}
   - {fileID: 798684729}
-  - {fileID: 1856837058}
+  - {fileID: 1495469756}
   - {fileID: 491394141}
   - {fileID: 233780317}
   - {fileID: 1197622628}
   - {fileID: 1255540468}
+  - {fileID: 1234141462}
   - {fileID: 857100235}
+  - {fileID: 2056221273}
   - {fileID: 1239996483}
   - {fileID: 962965054}
-  - {fileID: 1495469756}
+  - {fileID: 484263494}
   - {fileID: 654772564}
   - {fileID: 361469008}
-  - {fileID: 484263494}
+  - {fileID: 1856837058}
   - {fileID: 1559790302}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -25429,6 +25429,7 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Move
       m_Flags: 0
+    m_Flags: 0
   jump:
     m_Name: Jump
     m_Type: 1
@@ -25453,6 +25454,7 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Jump
       m_Flags: 0
+    m_Flags: 0
   rotate:
     m_Name: Rotate
     m_Type: 0
@@ -25469,6 +25471,7 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Rotate
       m_Flags: 0
+    m_Flags: 0
   moveAcceleration: 5
   strafeAcceleration: 3
   rotateVelocity: 1
@@ -25502,6 +25505,7 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Mouse Look
       m_Flags: 0
+    m_Flags: 0
   sensitivity: {x: 1, y: 1}
   camera: {fileID: 2033392650}
   lookDownLimit: 90
@@ -32459,6 +32463,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TrackingType: 0
   m_UpdateType: 0
+  m_PositionInput:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_RotationInput:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
   m_PositionAction:
     m_Name: 
     m_Type: 0
@@ -32467,6 +32495,7 @@ MonoBehaviour:
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
+    m_Flags: 0
   m_RotationAction:
     m_Name: 
     m_Type: 0
@@ -32475,6 +32504,8 @@ MonoBehaviour:
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
+    m_Flags: 0
+  m_HasMigratedActions: 1
 --- !u!1001 &2013480851
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -61,13 +61,13 @@ You might have signed up for e-mail spam by creating this account. [Here](https:
 
 ### Install Unity Editor
 
-Once you're logged in, you'll be prompted to install Unity. Install the latest 2020 LTS version (_2020.3.23f1_ at the time of writing). You will be prompted to accept the licence terms for the software and the free _Unity Personal_ subscription.
+Once you're logged in, you'll be prompted to install Unity. Install the latest 2020 LTS version (_2020.3.30f1_ at the time of writing). You will be prompted to accept the licence terms for the software and the free _Unity Personal_ subscription.
 
 **Note:** Unity received an update after the screenshots below were made, they show an older version number.
 
 ### Install build platform support
 
-Once the download is completed, in the Unity hub left-hand menu, click _Installs_. You'll see version 2020.3.23f1 there. Click the gear icon in the top-right corner of that block.
+Once the download is completed, in the Unity hub left-hand menu, click _Installs_. You'll see version 2020.3.30f1 there. Click the gear icon in the top-right corner of that block.
 
 ![click the gear icon](./doc/edit-install.svg)
 
