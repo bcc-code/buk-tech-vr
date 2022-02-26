@@ -26,6 +26,12 @@ During this activity you're going to build your own virtual world in Unity 3D, p
 
 Follow [these instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to clone this repository to your local machine.
 
+### Oculus/Meta Quest 2 only
+
+Switch to the `oculus-quest` branch in Visual Studio Code.
+
+![Checkout the oculus-quest branch](./doc/quest-branch.svg)
+
 ## Prepare your phone
 
 Follow the section [Enable developer options and USB debugging](https://developer.android.com/studio/debug/dev-options#enable) of the Android Developer user guide
