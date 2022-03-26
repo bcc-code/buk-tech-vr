@@ -7,9 +7,9 @@ namespace Buk {
     private Rigidbody body;
     private float initialAngularDrag;
 
-    public InputAction Gas;
-    public InputAction Brake;
-    public float Torque = 2.0f;
+    public InputAction gas;
+    public InputAction brake;
+    public float torque = 2.0f;
     public Camera camera;
     public float maximumAngularVelocity = 25f;
 
@@ -19,23 +19,32 @@ namespace Buk {
       var initialAngularDrag = body.angularDrag;
 
       // Enable controls
-      Gas.Enable();
-      Brake.Enable();
+      gas.Enable();
+      brake.Enable();
 
       // Handle braking
-      // Increase drag when brake is pressed
-      Brake.performed += (_) => body.angularDrag = initialAngularDrag * Torque;
-      // Reset drag when brake is released
-      Brake.canceled += (_) => body.angularDrag = initialAngularDrag;
+      brake.performed += Brake;
+      brake.canceled += Cancel;
     }
+
+    // Increase drag when brake is pressed
+    void Brake(InputAction.CallbackContext _) => body.angularDrag = initialAngularDrag * torque;
+
+    // Reset drag when brake is released
+    void Cancel(InputAction.CallbackContext _) => body.angularDrag = initialAngularDrag;
 
     public void Update() {
       // Read gas input
-      var gas = Gas.ReadValue<float>();
-      if (gas != 0) {
+      var throttle = gas.ReadValue<float>();
+      if (throttle != 0) {
         // Add rotational force to spin ball in the direction the camera is looking.
-        body.AddTorque(camera.transform.right * gas * Torque, ForceMode.Force);
+        body.AddTorque(camera.transform.right * throttle * torque, ForceMode.Force);
       }
+    }
+
+    public void OnDestroy() {
+      brake.performed -= Brake;
+      brake.canceled -= Cancel;
     }
   }
 }

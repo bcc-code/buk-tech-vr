@@ -20,25 +20,29 @@ namespace Buk
     {
       if (activateAction != null)
       {
-        activateAction.started += ctx =>
-        {
-          if (TryDetectTarget(out currentTarget))
-          {
-            foreach (var activator in currentTarget) {
-              activator.ActivateStart(gameObject);
-            }
-          }
-        };
-        activateAction.performed += ctx =>
-        {
-          if (currentTarget != null)
-          {
-            foreach (var activator in currentTarget) {
-              activator.ActivateEnd(gameObject);
-            }
-          }
-        };
+        activateAction.started += ActivateStarted;
+        activateAction.performed += ActivatePerformed;
         activateAction.Enable();
+      }
+    }
+
+    public void ActivateStarted(InputAction.CallbackContext _)
+    {
+      if (TryDetectTarget(out currentTarget))
+      {
+        foreach (var activator in currentTarget) {
+          activator.ActivateStart(gameObject);
+        }
+      }
+    }
+
+    public void ActivatePerformed(InputAction.CallbackContext _)
+    {
+      if (currentTarget != null)
+      {
+        foreach (var activator in currentTarget) {
+          activator.ActivateEnd(gameObject);
+        }
       }
     }
 
@@ -56,6 +60,14 @@ namespace Buk
         targets = Enumerable.Empty<IActivateable>();
       }
       return targets.Any();
+    }
+
+    public void OnDestroy() {
+      if (activateAction != null)
+      {
+        activateAction.started -= ActivateStarted;
+        activateAction.performed -= ActivatePerformed;
+      }
     }
   }
 }

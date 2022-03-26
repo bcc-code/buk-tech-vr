@@ -23,36 +23,40 @@ namespace Buk
     public float lookUpLimit = 90f;
 
     public void Awake() {
-      this.mouseLook.performed += Look;
-      this.mouseLook.Enable();
+      mouseLook.performed += Look;
+      mouseLook.Enable();
     }
 
     public void Look(InputAction.CallbackContext context)
     {
       var delta = context.ReadValue<Vector2>();
       if (delta != Vector2.zero) {
-        this.transform.rotation *= Quaternion.AngleAxis(delta.x * sensitivity.x, Vector3.up);
-        if (this.camera != null) {
-          this.camera.transform.localRotation *= Quaternion.AngleAxis(delta.y * sensitivity.y, Vector3.left);
+        transform.rotation *= Quaternion.AngleAxis(delta.x * sensitivity.x, Vector3.up);
+        if (camera != null) {
+          camera.transform.localRotation *= Quaternion.AngleAxis(delta.y * sensitivity.y, Vector3.left);
           // The angle between where we're looking and straight forward.
           // Since the camera only rotates over its local x-axis, this is on that axis.
-          var offForwardAngle = Quaternion.Angle(this.camera.transform.localRotation, forward);
-          var offDownAngle = Quaternion.Angle(this.camera.transform.localRotation, down);
+          var offForwardAngle = Quaternion.Angle(camera.transform.localRotation, forward);
+          var offDownAngle = Quaternion.Angle(camera.transform.localRotation, down);
           if (offDownAngle < 90) {
             // Looking down
             if (offForwardAngle > lookDownLimit) {
               // Looking down from the horizon is positive degrees starting from 0, easy.
-              this.camera.transform.localRotation = Quaternion.Euler(lookDownLimit, 0, 0);
+              camera.transform.localRotation = Quaternion.Euler(lookDownLimit, 0, 0);
             }
           } else {
             // Looking up
             if (offForwardAngle > lookUpLimit) {
               // Looking from the horizon to the zenith is 360 degrees to 270 degrees. Hence 360 - lookUpLimit
-              this.camera.transform.localRotation = Quaternion.Euler(360 - lookUpLimit, 0, 0);
+              camera.transform.localRotation = Quaternion.Euler(360 - lookUpLimit, 0, 0);
             }
           }
         }
       }
+    }
+
+    public void OnDestroy() {
+      mouseLook.performed -= Look;
     }
   }
 }

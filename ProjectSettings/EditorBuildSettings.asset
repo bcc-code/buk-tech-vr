@@ -5,15 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/Palace.unity
+    guid: 985642e0d4fe290daa376bd9e6ba0edc
+  - enabled: 1
     path: Assets/Scenes/Start.unity
     guid: 783b65a898aff1078a6be25aabf49d4c
   - enabled: 1
     path: Assets/Scenes/MarbleRun.unity
     guid: 12efbd0056c6bc219858542681ba7692
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/6DOF.unity
     guid: 362e22bc00e39cf37b17c3d5e0b1d58b
+  - enabled: 1
+    path: Assets/Scenes/Planets.unity
+    guid: 5435197e3cc5b5bc3961c8dc226bc7d8
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 6496f0fb7715743e18ac1cad4b3a526e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f509293a0aa837ccebd7864cdd938a10, type: 2}

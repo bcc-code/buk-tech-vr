@@ -12,5 +12,9 @@ namespace Buk {
     private void Orientation(InputAction.CallbackContext context) {
       transform.localRotation = context.ReadValue<Quaternion>();
     }
+
+    public void OnDestroy() {
+      orientation.performed -= Orientation;
+    }
   }
 }

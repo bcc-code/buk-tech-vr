@@ -21,17 +21,27 @@ namespace Buk
     {
       if (teleportObject == null)
       {
-        teleportObject = this.gameObject;
+        teleportObject = gameObject;
       }
       if (activateAction != null)
       {
-        activateAction.performed += ctx =>
-        {
-          if (Physics.Raycast(transform.position, transform.forward, out var detected, LimitDistance))
-          {
-            teleportObject.transform.position = detected.transform.position;
-          }
-        };
+        activateAction.performed += TryTeleport;
+      }
+    }
+    
+    public void TryTeleport(InputAction.CallbackContext _)
+    {
+      if (Physics.Raycast(transform.position, transform.forward, out var detected, LimitDistance))
+      {
+        teleportObject.transform.position = detected.transform.position;
+      }
+    }
+
+    public void OnDestroy()
+    {
+      if (activateAction != null)
+      {
+        activateAction.performed -= TryTeleport;
       }
     }
   }

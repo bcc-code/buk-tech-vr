@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Buk {
   public class FollowTarget : MonoBehaviour {
