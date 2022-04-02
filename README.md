@@ -10,6 +10,7 @@ During this activity you're going to build your own virtual world in Unity 3D, p
 - [ ] `git` see [installation instructions](https://github.com/git-guides/install-git)
 - [ ] An Android¹ smartphone² with at least Android 4.3 or higher capable of running 3D games³.
 - [ ] A USB cable to connect your phone to your PC
+- [ ] Optional: Headphones / earbuds for in-game sound. Bluetooth is best, because you won't have to mess with a cable in an awkward location.
 
 1. Apple makes it very difficult to install a self-made iOS app to your phone. Therefore we cannot offer support for iOS during the BUK camp.
 2. If you have VR glasses and _know how to deploy Unity apps to them_, you can use that. The organisation of BUK Tech cannot offer support for this. If you bring your own knowledge or a knowledgeable mentor, you're free to bring your own VR glasses.
@@ -67,13 +68,13 @@ You might have signed up for e-mail spam by creating this account. [Here](https:
 
 ### Install Unity Editor
 
-Once you're logged in, you'll be prompted to install Unity. Install the latest 2020 LTS version (_2020.3.30f1_ at the time of writing). You will be prompted to accept the licence terms for the software and the free _Unity Personal_ subscription.
+Once you're logged in, you'll be prompted to install Unity. Install the latest 2020 LTS version (_2020.3.32f1_ at the time of writing). You will be prompted to accept the licence terms for the software and the free _Unity Personal_ subscription.
 
-**Note:** Unity received an update after the screenshots below were made, they show an older version number.
+**Note:** Unity received updates after the screenshots below were made, they show an older version number.
 
 ### Install build platform support
 
-Once the download is completed, in the Unity hub left-hand menu, click _Installs_. You'll see version 2020.3.30f1 there. Click the gear icon in the top-right corner of that block.
+Once the download is completed, in the Unity hub left-hand menu, click _Installs_. You'll see version 2020.3.32f1 there. Click the gear icon in the top-right corner of that block.
 
 ![click the gear icon](./doc/edit-install.svg)
 
