@@ -18,7 +18,7 @@ MonoBehaviour:
     pos: {x: 0, y: 0, z: 0}
   overridePrefabRotation: 0
   rotation:
-    step: {x: 90, y: 90, z: 90}
+    step: {x: 0, y: 90, z: 0}
   overridePrefabRaycast: 0
   placementRaycast:
     useRaycast: 0
@@ -26,19 +26,19 @@ MonoBehaviour:
     startOffset: {x: 0, y: 0, z: 0}
   overridePrefabRandomizer: 0
   randomizer:
-    useRandomizer: 1
+    useRandomizer: 0
     allowReplacement: 0
     replacementID: 0
     replacementWeight: 0
     allowSequentialRepeat: 0
     rotateMin: {x: 0, y: -180, z: 0}
     rotateMax: {x: 0, y: 180, z: 0}
-    rotateStep: {x: 90, y: 90, z: 0}
-    scaleMin: {x: 1, y: 1, z: 1}
-    scaleMax: {x: 1, y: 1, z: 1}
-    scaleLock: 0
-    flipX: 1
+    rotateStep: {x: 1, y: 1, z: 1}
+    scaleMin: {x: 0.75, y: 0.75, z: 0.75}
+    scaleMax: {x: 1.25, y: 1.25, z: 1.25}
+    scaleLock: 1
+    flipX: 0
     flipY: 0
     flipZ: 0
-    posMin: {x: 0, y: 0, z: 0}
-    posMax: {x: 0, y: 0, z: 0}
+    posMin: {x: -0.5, y: -0.1, z: -0.5}
+    posMax: {x: 0.5, y: 0.1, z: 0.5}
