@@ -1,34 +1,21 @@
 ﻿using System;
 using UnityEngine;
 using Mirror;
+using BUK.Multiplayer;
 using System.Collections.Generic;
 
 namespace BUK.Players
 {
     public class BasePlayer : NetworkBehaviour
     {
+        [SyncVar(hook = "OnChangeUsername")]
+        public string username = null;
         [SyncVar]
-        public string _username = null;
-        [SyncVar]
-        public string _pid = null;
-
-        public string username
-        {
-            get => _username;
-            set => _username = value;
-        }
-
-        public string pid
-        {
-            get => _pid;
-            set => _pid = value;
-        }
+        public string pid = null;
 
         public List<Behaviour> locallyEnabled = new List<Behaviour>();
 
-        void Update()
-        {
-        }
+        public GameObject usernameObject;
 
         [Command]
         public void CmdSetUsername(string username)
@@ -49,11 +36,12 @@ namespace BUK.Players
         {
             if (String.IsNullOrEmpty(username))
             {
-                CmdSetUsername("Johnson-" + netId);
+                var username = ((BioNetworkManager) NetworkManager.singleton).username;
+                CmdSetUsername(username);
             }
             this.ActivateLocalPlayer();
         }
-    
+
         public string GetUsername()
         {
             return this.username;
@@ -86,20 +74,27 @@ namespace BUK.Players
             gameObject.SetActive(active);
         }
 
-        public virtual void ActivateLocalPlayer()
+        protected virtual void ActivateLocalPlayer()
         {
+            this.usernameObject.SetActive(false);
             foreach (var behaviour in locallyEnabled)
             {
                 behaviour.enabled = true;
             }
         }
 
-        public virtual void DeactivateLocalPlayer()
+        protected virtual void DeactivateLocalPlayer()
         {
+            this.usernameObject.SetActive(true);
             foreach (var behaviour in locallyEnabled)
             {
                 behaviour.enabled = false;
             }
+        }
+
+        private void OnChangeUsername(string oldUsername, string username)
+        {
+            this.usernameObject.GetComponent<FloatingUsername>().SetUsername(username);
         }
     }
 }
