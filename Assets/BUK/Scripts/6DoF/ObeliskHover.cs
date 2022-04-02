@@ -13,6 +13,7 @@ namespace Buk.SixDoF {
     private GameObject moveTo;
 
     public void Start() {
+      if (target != null)
       MoveTo(target);
     }
 
