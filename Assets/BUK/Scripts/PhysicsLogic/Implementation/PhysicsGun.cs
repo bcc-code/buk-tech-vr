@@ -9,6 +9,7 @@ namespace Buk.PhysicsLogic.Implementation
   {
     public GameObject bulletType;
     public InputAction trigger;
+    public bool inputEnabled;
     // How fast the bullet is launched
     public float muzzleVelocity = 10.0f;
     // Seconds before you can shoot a new bullet.
@@ -18,7 +19,8 @@ namespace Buk.PhysicsLogic.Implementation
 
     private void TriggerPressed(InputAction.CallbackContext _)
     {
-      Shoot();
+      if (inputEnabled)
+        Shoot();
     }
 
     public void Awake()
