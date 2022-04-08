@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Buk
+namespace Buk.Motion
 {
   // Add this behaviour on a player object that is parent to a camera.
   public class MouseLook : MonoBehaviour
