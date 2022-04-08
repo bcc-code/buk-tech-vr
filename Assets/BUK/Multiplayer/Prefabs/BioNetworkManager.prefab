@@ -54,7 +54,7 @@ MonoBehaviour:
   CongestionWindow: 0
   SendWindowSize: 4096
   ReceiveWindowSize: 4096
-  NonAlloc: 1
+  NonAlloc: 0
   debugLog: 0
   statisticsGUI: 0
   statisticsLog: 0
@@ -86,13 +86,11 @@ MonoBehaviour:
   playerSpawnMethod: 0
   spawnPrefabs: []
   serverDiscoveryRow: {fileID: 6272401617239376579, guid: 7455ac27b967aa945afe8fdc4f66aa72, type: 3}
-  menuServers: {fileID: 0}
+  serverListContainer: {fileID: 0}
   serverNameInput: {fileID: 0}
   usernameInput: {fileID: 0}
-  lobbyUi: {fileID: 0}
-  loginUi: {fileID: 0}
-  name: 
-  username: 
+  serverBrowser: {fileID: 0}
+  usernameLogin: {fileID: 0}
 --- !u!114 &8480775297373047957
 MonoBehaviour:
   m_ObjectHideFlags: 0
