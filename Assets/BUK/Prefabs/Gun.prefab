@@ -53,5 +53,6 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  inputEnabled: 1
   muzzleVelocity: 10
   coolDown: 0.25

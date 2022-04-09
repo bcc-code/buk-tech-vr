@@ -151,13 +151,10 @@ To rotate what you are drawing press <kbd>Space</kbd>.
 To mirror what you are drawing press <kbd>F</kbd>.  
 To hide the MAST grid, press <kbd>G</kbd>.  
 
-_You have reached the temporary end of the tutorial. We are not finished writing this part yet!_
+_You have reached the end of the starting tutorial. We are not finished writing this part yet!_
 
-## To be added
-
-- Improved character control
-- Multiplayer
-- Lobby and mini-game mechanism
+## The End
+You have reached the end of the starting tutorial. If you want to implement multiplayer into your games you can now follow our [Multiplayer Tutorial](MULTIPLAYER.md)
 
 ## Attributions
 
