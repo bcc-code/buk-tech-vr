@@ -19,11 +19,11 @@ namespace Buk.Multiplayer
         /// </summary>
         [Header("Lobby Menu Objects")]
         public GameObject serverDiscoveryRow;
-        public GameObject serverListContainer;
-        public TMP_InputField serverNameInput;
-        public TMP_InputField usernameInput;
         public GameObject serverBrowser;
+        public TMP_InputField serverNameInput;
+        public GameObject serverListContainer;
         public GameObject usernameLogin;
+        public TMP_InputField usernameInput;
 
         /// <summary>
         /// NonSerialized but public servername and username so other scripts can read these values

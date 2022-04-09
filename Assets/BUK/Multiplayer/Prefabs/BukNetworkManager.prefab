@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8999189282066953459}
   - component: {fileID: 8480775297373047957}
   m_Layer: 0
-  m_Name: BioNetworkManager
+  m_Name: BukNetworkManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
