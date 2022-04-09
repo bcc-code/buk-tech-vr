@@ -78,7 +78,7 @@ Once the download is completed, in the Unity hub left-hand menu, click _Installs
 
 ![click the gear icon](./doc/edit-install.svg)
 
-You'll want to at least install _Android Built Support_, _Android SDK & NDK Tools_, and _OpenJDK_. This is necessary to be able to install your game on your Android phone.
+You'll want to at least install _Android Built Support_, _Android SDK & NDK Tools_, and _OpenJDK_. This is necessary to be able to compile and install your game to your device. If you're using an Oculus Quest, this applies too, because the Oculus OS is based on Android.
 
 ![add android build support](./doc/add-modules.svg)
 
