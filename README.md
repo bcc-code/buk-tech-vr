@@ -27,15 +27,19 @@ During this activity you're going to build your own virtual world in Unity 3D, p
 
 Follow [these instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to clone this repository to your local machine.
 
-### Oculus/Meta Quest 2 only
+### Meta Quest 2 only
 
 Switch to the `oculus-quest` branch in Visual Studio Code.
 
 ![Checkout the oculus-quest branch](./doc/quest-branch.svg)
 
-## Prepare your phone
+## Prepare your device
 
+### Android
 Follow the section [Enable developer options and USB debugging](https://developer.android.com/studio/debug/dev-options#enable) of the Android Developer user guide
+
+### Meta Quest 2
+Follow [this set of instructions](https://learn.adafruit.com/sideloading-on-oculus-quest/enable-developer-mode) to enable Developer Mode on the Meta Quest.
 
 ## Install Unity Hub
 
@@ -78,7 +82,7 @@ Once the download is completed, in the Unity hub left-hand menu, click _Installs
 
 ![click the gear icon](./doc/edit-install.svg)
 
-You'll want to at least install _Android Built Support_, _Android SDK & NDK Tools_, and _OpenJDK_. This is necessary to be able to compile and install your game to your device. If you're using an Oculus Quest, this applies too, because the Oculus OS is based on Android.
+You'll want to at least install _Android Built Support_, _Android SDK & NDK Tools_, and _OpenJDK_. This is necessary to be able to compile and install your game to your device. If you're using an Meta Quest, this applies too, because its OS is based on Android.
 
 ![add android build support](./doc/add-modules.svg)
 
