@@ -3,5 +3,9 @@
     "Romjulscamp"
   ],
   "editor.tabSize": 2,
-  "files.eol": "\n"
+  "files.eol": "\n",
+  "files.exclude": {
+    "*.csproj": true,
+    "*.sln": true
+  }
 }
