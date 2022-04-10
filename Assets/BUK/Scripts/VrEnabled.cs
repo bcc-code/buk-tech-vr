@@ -37,6 +37,8 @@ namespace Buk
         
                 XRGeneralSettings.Instance.Manager.StopSubsystems();
                 XRGeneralSettings.Instance.Manager.DeinitializeLoader();
+
+                Camera.main.ResetAspect();
                 Debug.Log("XR stopped completely.");
             }
         }

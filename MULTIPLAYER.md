@@ -69,7 +69,9 @@ This UI provides the following things
 
 This prefab does nothing on its own but provide the UI elements to show. To actually use this UI we have to set some values in the `BukNetworkManager` and we need to bind some functions to call when clicking the buttons.
 
-First we need to add the prefab to the scene, so just drag it into our scene. We then need to set the missing values in lobby menu objects in the `BukNetworkManager`. By expanding the structure of the `LobbyMenu` prefab, we can see where to put which objects.
+First we need to add the prefab to the scene, so just drag it into our scene. This UI is located in world space, so you will have to move, scale, and rotate it such that it is in front of the scene's camera and in full view.
+
+We then need to set the missing values in lobby menu objects in the `BukNetworkManager`. By expanding the structure of the `LobbyMenu` prefab, we can see where to put which objects.
 
 ![Add the LobbyMenu objects to the BukNetworkManager](./doc/lobby-mapping.png)
 

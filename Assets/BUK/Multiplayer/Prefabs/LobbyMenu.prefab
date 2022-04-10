@@ -696,7 +696,7 @@ RectTransform:
   m_GameObject: {fileID: 1773180650366001010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.017496238, y: 0.017496238, z: 0.017496238}
   m_Children:
   - {fileID: 1773180651822653937}
   - {fileID: 1773180651893382551}
@@ -719,7 +719,7 @@ Canvas:
   m_GameObject: {fileID: 1773180650366001010}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -783,7 +783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8c5ed1e0984a844b62f3c275712def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsVREnabled: 0
+  isVREnabled: 0
 --- !u!1 &1773180650413682156
 GameObject:
   m_ObjectHideFlags: 0
