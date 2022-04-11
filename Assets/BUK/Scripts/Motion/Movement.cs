@@ -22,13 +22,15 @@ namespace Buk.Motion
     public float jumpVelocity = 3f;
     public float maxVelocity = 15f;
 
-    private new CapsuleCollider collider;
+    private CapsuleCollider collider;
+    private Camera camera;
     private Rigidbody body;
     private bool onGround = false;
 
     public void Awake()
     {
       collider = GetComponent<CapsuleCollider>();
+      camera = GetComponentInChildren<Camera>();
       body = collider.attachedRigidbody;
       if (jump != null) {
         jump.performed += Jump;
@@ -46,22 +48,21 @@ namespace Buk.Motion
         body.velocity += Vector3.up * jumpVelocity;
       }
     }
+
     public void FixedUpdate()
     {
-      var newOnGround = body.SweepTest(-transform.up, out var _, 0.1f);
+      var newOnGround = Physics.SphereCast(transform.position, collider.bounds.extents.x * 0.9f, Vector3.down, out var _, collider.bounds.extents.y * 1.1f);
       if (onGround != newOnGround) {
         onGround = newOnGround;
-        //Debug.Log($"Player is {(onGround ? "on" : "off")} the ground.");
       };
       // Rotate character in VR using controller, this value is always zero if using mouse look on the PC.
-      var rotation = rotate?.ReadValue<float>() ?? 0;
+      var rotation = (rotate?.ReadValue<Vector2>() ?? Vector2.zero).x;
       var movement = move?.ReadValue<Vector2>() ?? Vector2.zero;
       // Must be on the ground
-      if (true || onGround)
+      if (onGround)
       {
-        // Rotate the player, not the RigidBody (which is rotation locked relative to the player)
-        gameObject.transform.localRotation *= Quaternion.AngleAxis(rotation * rotateVelocity, Vector3.up);
-        body.AddRelativeForce(new Vector3(movement.x * strafeAcceleration, 0, movement.y * moveAcceleration), ForceMode.Acceleration);
+        transform.rotation *= Quaternion.AngleAxis(rotation * rotateVelocity, Vector3.up);
+        body.AddForce(Quaternion.Euler(0, camera.transform.rotation.eulerAngles.y, 0) * new Vector3(movement.x * strafeAcceleration, 0, movement.y * moveAcceleration), ForceMode.Acceleration);
         // Limit velocity
         var xzVelocity = new Vector3(body.velocity.x, 0, body.velocity.z);
         var yVelocity = new Vector3(0, body.velocity.y, 0);

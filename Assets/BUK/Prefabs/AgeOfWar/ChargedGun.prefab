@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3481679217441453002
+--- !u!1 &3059301994061046254
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,61 +8,53 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3481679217441453003}
-  - component: {fileID: 2849699062453284508}
+  - component: {fileID: 3059301994061046240}
+  - component: {fileID: 3059301994061046255}
   m_Layer: 0
-  m_Name: Gun
+  m_Name: ChargedGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3481679217441453003
+--- !u!4 &3059301994061046240
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3481679217441453002}
+  m_GameObject: {fileID: 3059301994061046254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2849699062453284508
+--- !u!114 &3059301994061046255
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3481679217441453002}
+  m_GameObject: {fileID: 3059301994061046254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3e2a024b2a4764791103d3ba8ad121, type: 3}
+  m_Script: {fileID: 11500000, guid: cd59ca430bce3020f8989db21ce60e7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletType: {fileID: 2333780007095049887, guid: 255dccc99baa1a9b2969a64637338653, type: 3}
+  bulletType: {fileID: 4408222766877305015, guid: 89ce37a17380003da8e365cf482b87da, type: 3}
   trigger:
     m_Name: Trigger
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: e1046b38-9db6-4987-9e5f-6d2b15478038
+    m_Id: 347c660f-86e4-4f1a-bdf8-574c5b46f057
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 562cca0f-c867-466a-b8e8-6be143be0d20
-      m_Path: <Mouse>/leftButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Trigger
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1b07d185-4412-412b-a043-e85a4050b4ab
-      m_Path: <Gamepad>/leftTrigger
+      m_Id: 0e3fc1ab-6cba-40ed-8493-2f19fb4900f7
+      m_Path: 
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -70,5 +62,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Flags: 0
   inputEnabled: 1
-  maxMuzzleVelocity: 10
-  coolDown: 0.25
+  minMuzzleVelocity: 1
+  maxMuzzleVelocity: 25
+  maxChargeTime: 1.5
+  coolDown: 1

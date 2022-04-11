@@ -14,10 +14,11 @@ GameObject:
   - component: {fileID: 2333780007095049885}
   - component: {fileID: 2333780007095049886}
   - component: {fileID: 3761701234800011831}
-  - component: {fileID: 2121761218347350213}
+  - component: {fileID: 7931527656799357143}
+  - component: {fileID: 2374956081658136767}
   m_Layer: 0
-  m_Name: SphereBullet
-  m_TagString: Untagged
+  m_Name: ExplosionBullet
+  m_TagString: destructible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,7 +128,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 15
---- !u!114 &2121761218347350213
+--- !u!114 &7931527656799357143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2333780007095049887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2c222b406661e558b86ea4429de376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnType: {fileID: 4186185260954942782, guid: 68d7ef2c3cd03f862ab913e58ead5a2f, type: 3}
+--- !u!114 &2374956081658136767
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,4 +154,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pierce: 1
-  minLethalVelocity: 3
+  bounce: 1

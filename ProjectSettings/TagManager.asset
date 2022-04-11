@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - MAST_Holder
+  - destructible
+  - enemyTarget
   layers:
   - Default
   - TransparentFX

@@ -1,9 +1,7 @@
-using UnityEngine;
-
 namespace Buk.PhysicsLogic.Interfaces
 {
   public interface IGun
   {
-    public void Shoot();
+    public void Shoot(float velocity);
   }
 }
