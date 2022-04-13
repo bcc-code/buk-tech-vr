@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1608815943617360604}
+  - component: {fileID: 8564668772860868922}
+  - component: {fileID: 5137513116850173938}
   m_Layer: 0
   m_Name: Wood_Post_Small
   m_TagString: Untagged
@@ -31,6 +33,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8564668772860868922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358350524729922209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d18a95c4b760fc46a003283dc8cfb69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 
+--- !u!114 &5137513116850173938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358350524729922209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b57976f026c71159f7c6433da99415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 250
 --- !u!1 &8101235534875865469
 GameObject:
   m_ObjectHideFlags: 0

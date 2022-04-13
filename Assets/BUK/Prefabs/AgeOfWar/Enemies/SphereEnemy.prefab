@@ -108,9 +108,11 @@ GameObject:
   - component: {fileID: 5433053263073871102}
   - component: {fileID: -745052719658159375}
   - component: {fileID: -2999539136243185318}
+  - component: {fileID: 2673724578010072187}
+  - component: {fileID: 3853497559344985517}
   m_Layer: 0
   m_Name: SphereEnemy
-  m_TagString: destructible
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,7 +189,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  maxHealth: 100
+--- !u!114 &2673724578010072187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8569158871092097750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d18a95c4b760fc46a003283dc8cfb69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: enemy
+--- !u!114 &3853497559344985517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8569158871092097750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41ada00712861f5c981fe2f98cdf3b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: 1
 --- !u!1001 &7197743246073574844
 PrefabInstance:
   m_ObjectHideFlags: 0

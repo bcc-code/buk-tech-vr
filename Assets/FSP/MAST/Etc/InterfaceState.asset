@@ -15,9 +15,9 @@ MonoBehaviour:
   selectedInterfaceTab: 0
   gridExists: 1
   previousBuildToolIndex: -1
-  selectedBuildToolIndex: 2
-  selectedPrefabIndex: 272
-  prefabPath: Assets/FSP/Modular Terrain
+  selectedBuildToolIndex: -1
+  selectedPrefabIndex: -1
+  prefabPath: Assets/FSP/Modular Village
   selectedPrefabPaletteFolderIndex: 0
   prefabPaletteColumnCount: 4
   previousPaintToolIndex: -1

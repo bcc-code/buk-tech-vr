@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Buk.AgeOfWar
@@ -34,6 +35,17 @@ namespace Buk.AgeOfWar
         Instantiate(spawner.Current.prefab, spawner.Current.position, Quaternion.identity);
         spawner.MoveNext();
       }
+    }
+
+    public void TargetDied(Team team) {
+      if (FindObjectsOfType<Target>().Where(target => target.gameObject.GetComponent<Team>().SameTeam(team)).Count() == 0) {
+        EndGame();
+      }
+    }
+
+    public void EndGame() {
+      // TODO: Score etc.
+      Destroy(this);
     }
 
     private IEnumerable<Spawn> Spawns()
