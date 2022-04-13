@@ -1,9 +1,9 @@
 using UnityEngine;
 
-namespace Buk.PhysicsLogic.Implementation
+namespace Buk.AgeOfWar
 {
   [RequireComponent(typeof(Rigidbody))]
-  public class ExplodeOnStart : MonoBehaviour
+  public class ExplosionDamage : MonoBehaviour
   {
     public float explosionForce = 5.0f;
     public float explosionDamage = 0.0f;
@@ -15,6 +15,9 @@ namespace Buk.PhysicsLogic.Implementation
       Destroy(gameObject, explosionDuration);
       foreach (var hit in Physics.OverlapSphere(transform.position, explosionRadius)) {
         hit.attachedRigidbody?.AddExplosionForce(explosionForce, transform.position, explosionRadius, explosionLift);
+        if (explosionDamage > 0f && hit.TryGetComponent<Health>(out var health) == true) {
+          health.Hit(explosionDamage * explosionRadius / (hit.gameObject.transform.position - transform.position).sqrMagnitude);
+        }
       }
     }
   }

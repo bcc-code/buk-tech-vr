@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 204240330}
     m_Modifications:
+    - target: {fileID: 2849699062453284508, guid: 07f13a628132c556fa0c89b1d15e6a03, type: 3}
+      propertyPath: bulletType
+      value: 
+      objectReference: {fileID: 3313986314498673024, guid: 3659de45e255adb2d8e7664d9f11020c, type: 3}
     - target: {fileID: 5545616317144038276, guid: 07f13a628132c556fa0c89b1d15e6a03, type: 3}
       propertyPath: bulletType
       value: 
@@ -320,11 +324,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3931231867528561452, guid: 63add8a13e875e4cea3c7df726291311, type: 3}
       propertyPath: jumpVelocity
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3931231867528561452, guid: 63add8a13e875e4cea3c7df726291311, type: 3}
       propertyPath: moveAcceleration
-      value: 25
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931231867528561452, guid: 63add8a13e875e4cea3c7df726291311, type: 3}
+      propertyPath: strafeAcceleration
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3931231867528561453, guid: 63add8a13e875e4cea3c7df726291311, type: 3}
       propertyPath: m_RootOrder
@@ -574,6 +582,14 @@ PrefabInstance:
     - target: {fileID: 3059301994061046254, guid: 51f8b9869071deaa39af0a21ceb44a34, type: 3}
       propertyPath: m_Name
       value: ChargedGun
+      objectReference: {fileID: 0}
+    - target: {fileID: 3059301994061046255, guid: 51f8b9869071deaa39af0a21ceb44a34, type: 3}
+      propertyPath: bulletType
+      value: 
+      objectReference: {fileID: 6114015601508537846, guid: 89ce37a17380003da8e365cf482b87da, type: 3}
+    - target: {fileID: 3059301994061046255, guid: 51f8b9869071deaa39af0a21ceb44a34, type: 3}
+      propertyPath: minMuzzleVelocity
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3059301994061046255, guid: 51f8b9869071deaa39af0a21ceb44a34, type: 3}
       propertyPath: trigger.m_SingletonActionBindings.Array.size

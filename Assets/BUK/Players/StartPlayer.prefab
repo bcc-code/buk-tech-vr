@@ -190,10 +190,10 @@ MonoBehaviour:
       m_Action: Rotate
       m_Flags: 0
     m_Flags: 0
-  moveAcceleration: 14
-  strafeAcceleration: 10
+  moveAcceleration: 10
+  strafeAcceleration: 6
   rotateVelocity: 3
-  jumpVelocity: 4
+  jumpVelocity: 1
   maxVelocity: 9
 --- !u!54 &3931231867528561449
 Rigidbody:
@@ -203,8 +203,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3931231867528561426}
   serializedVersion: 2
-  m_Mass: 20
-  m_Drag: 1.5
+  m_Mass: 5
+  m_Drag: 0.1
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -252,7 +252,7 @@ Transform:
   m_GameObject: {fileID: 3931231868019353077}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 1, z: 0.5}
+  m_LocalScale: {x: 0.5, y: 0.9, z: 0.5}
   m_Children: []
   m_Father: {fileID: 3931231867528561453}
   m_RootOrder: 1

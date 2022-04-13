@@ -21,6 +21,7 @@ namespace Buk.Motion
     public float rotateVelocity = 1f;
     public float jumpVelocity = 3f;
     public float maxVelocity = 15f;
+    public float offGroundAccelerationFactor = 0.15f;
 
     private CapsuleCollider collider;
     private Camera camera;
@@ -57,18 +58,18 @@ namespace Buk.Motion
       };
       // Rotate character in VR using controller, this value is always zero if using mouse look on the PC.
       var rotation = (rotate?.ReadValue<Vector2>() ?? Vector2.zero).x;
-      var movement = move?.ReadValue<Vector2>() ?? Vector2.zero;
-      // Must be on the ground
-      if (onGround)
-      {
-        transform.rotation *= Quaternion.AngleAxis(rotation * rotateVelocity, Vector3.up);
-        body.AddForce(Quaternion.Euler(0, camera.transform.rotation.eulerAngles.y, 0) * new Vector3(movement.x * strafeAcceleration, 0, movement.y * moveAcceleration), ForceMode.Acceleration);
-        // Limit velocity
-        var xzVelocity = new Vector3(body.velocity.x, 0, body.velocity.z);
-        var yVelocity = new Vector3(0, body.velocity.y, 0);
-        if (xzVelocity.magnitude > maxVelocity) {
-          body.velocity = xzVelocity.normalized * maxVelocity + yVelocity;
-        }
+      var movement = Vector2.Scale(move?.ReadValue<Vector2>() ?? Vector2.zero, new Vector2(strafeAcceleration, moveAcceleration));
+      if (!onGround) {
+        // Reduce acceleration in the air.
+        movement.Scale(new Vector2(offGroundAccelerationFactor, offGroundAccelerationFactor));
+      }
+      transform.rotation *= Quaternion.AngleAxis(rotation * rotateVelocity, Vector3.up);
+      body.AddForce(Quaternion.Euler(0, camera.transform.rotation.eulerAngles.y, 0) * new Vector3(movement.x, 0, movement.y), ForceMode.Acceleration);
+      // Limit velocity
+      var xzVelocity = new Vector3(body.velocity.x, 0, body.velocity.z);
+      var yVelocity = new Vector3(0, body.velocity.y, 0);
+      if (xzVelocity.magnitude > maxVelocity) {
+        body.velocity = xzVelocity.normalized * maxVelocity + yVelocity;
       }
     }
 
