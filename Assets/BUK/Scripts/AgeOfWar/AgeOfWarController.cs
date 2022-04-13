@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 namespace Buk.AgeOfWar
@@ -11,6 +12,7 @@ namespace Buk.AgeOfWar
     public List<GameObject> EnemyPrefabs = new List<GameObject>();
     private System.Random random = new System.Random();
     private IEnumerator<Spawn> spawner;
+    private TextMeshPro scoreBoard;
 
     public void Awake()
     {
@@ -27,6 +29,7 @@ namespace Buk.AgeOfWar
         spawner = Spawns().GetEnumerator();
         spawner.MoveNext();
       }
+      scoreBoard = GetComponentInChildren<TextMeshPro>();
     }
 
     public void FixedUpdate()
@@ -35,6 +38,11 @@ namespace Buk.AgeOfWar
         Instantiate(spawner.Current.prefab, spawner.Current.position, Quaternion.identity);
         spawner.MoveNext();
       }
+    }
+
+    public void Update()
+    {
+      scoreBoard.text = $"Time: {Time.fixedTime / 3600:00}:{Time.fixedTime / 60 % 3600:00}:{(int)Time.fixedTime % 60:00}";
     }
 
     public void TargetDied(Team team) {

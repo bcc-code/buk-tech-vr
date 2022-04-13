@@ -10,7 +10,7 @@ namespace Buk.PhysicsLogic.Implementation
     private Rigidbody body;
     public void Start()
     {
-      body = gameObject.GetComponent<Rigidbody>();
+      body = GetComponent<Rigidbody>();
     }
     public void OnCollisionEnter(Collision collisionTarget)
     {
