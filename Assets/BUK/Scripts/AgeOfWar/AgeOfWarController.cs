@@ -7,18 +7,29 @@ namespace Buk.AgeOfWar
 {
   public class AgeOfWarController : MonoBehaviour
   {
-    public float difficulty = 1.0f;
-    public float spawnDistance = 50f;
     public List<GameObject> EnemyPrefabs = new List<GameObject>();
-    private System.Random random = new System.Random();
+    private System.Random random;
     private IEnumerator<Spawn> spawner;
     private TextMeshPro scoreBoard;
     private float startTime = 0f;
+    
+    public float difficulty = 1f;
+    public float spawnDistance = 50f;
+
+    [Header("Random number generator")]
+    public bool useFixedSeed = false;
+    // If using a fixed seed, the game should always generate the same "random" enemy attack pattern.
+    public int seed = 0;
 
     public float GameTime { get => Time.fixedTime - startTime; }
 
     public void Awake()
     {
+      if (useFixedSeed) {
+        random = new System.Random((int)seed);
+      } else {
+        random = new System.Random();
+      }
       startTime = Time.fixedTime;
       for (var i = EnemyPrefabs.Count - 1; i >= 0; i--)
       {
