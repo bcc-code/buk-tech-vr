@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 3883734333500726099}
   - component: {fileID: 3883734333500726098}
   m_Layer: 0
-  m_Name: AgeOfWarController
+  m_Name: AgeOfBukController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

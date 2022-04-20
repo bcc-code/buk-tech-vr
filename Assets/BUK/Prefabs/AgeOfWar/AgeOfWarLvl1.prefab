@@ -200,7 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3637051598736529618}
   m_Layer: 0
-  m_Name: AgeOfWarLvl1
+  m_Name: AgeOfBukLvl1
   m_TagString: MAST_Holder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15557,7 +15557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed35b807d33549782b9a16529d3a3384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: AgeOfWar
+  targetScene: AgeOfBuk
   teleportOnActivateStart: 1
 --- !u!114 &8630636257328278656
 MonoBehaviour:

@@ -1,7 +1,7 @@
 using System.Linq;
 using UnityEngine;
 
-namespace Buk.AgeOfWar
+namespace Buk.AgeOfBuk
 {
   [RequireComponent(typeof(Team))]
   [RequireComponent(typeof(Rigidbody))]

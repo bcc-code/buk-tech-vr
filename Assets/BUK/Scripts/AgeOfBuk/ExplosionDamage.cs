@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Buk.AgeOfWar
+namespace Buk.AgeOfBuk
 {
   [RequireComponent(typeof(Rigidbody))]
   public class ExplosionDamage : MonoBehaviour

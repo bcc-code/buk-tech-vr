@@ -513,7 +513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3637051598736529621, guid: a4837ea7bff65ac9c9402d3d099c0237, type: 3}
       propertyPath: m_Name
-      value: AgeOfWarLvl1
+      value: AgeOfBukLvl1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4837ea7bff65ac9c9402d3d099c0237, type: 3}
@@ -538,7 +538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3883734333500726097, guid: 0c5fc7cf7b642cce7bc2af110ee55808, type: 3}
       propertyPath: m_Name
-      value: AgeOfWarController
+      value: AgeOfBukController
       objectReference: {fileID: 0}
     - target: {fileID: 3883734333500726099, guid: 0c5fc7cf7b642cce7bc2af110ee55808, type: 3}
       propertyPath: m_RootOrder

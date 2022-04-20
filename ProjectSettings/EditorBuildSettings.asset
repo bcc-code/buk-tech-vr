@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/BUK/Scenes/AgeOfWar.unity
+    path: Assets/BUK/Scenes/AgeOfBuk.unity
     guid: 94e51220a52bd062ba219e700b9e16fa
   - enabled: 0
     path: Assets/BUK/Scenes/Start.unity

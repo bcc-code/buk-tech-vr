@@ -3,9 +3,9 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-namespace Buk.AgeOfWar
+namespace Buk.AgeOfBuk
 {
-  public class AgeOfWarController : MonoBehaviour
+  public class AgeOfBukController : MonoBehaviour
   {
     public List<GameObject> EnemyPrefabs = new List<GameObject>();
     private System.Random random;

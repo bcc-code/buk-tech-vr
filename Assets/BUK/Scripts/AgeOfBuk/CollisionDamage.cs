@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 
-namespace Buk.AgeOfWar
+namespace Buk.AgeOfBuk
 {
   [RequireComponent(typeof(Collider))]
   public class CollisionDamage : MonoBehaviour

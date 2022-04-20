@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Buk.AgeOfWar
+namespace Buk.AgeOfBuk
 {
   public class Team : MonoBehaviour
   {
