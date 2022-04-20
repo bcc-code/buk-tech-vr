@@ -79,7 +79,7 @@ namespace Buk.PhysicsLogic.Implementation
       if (trigger != null)
       {
         trigger.started -= TriggerPressed;
-        trigger.performed -= TriggerReleased;
+        trigger.canceled -= TriggerReleased;
       }
     }
   }
