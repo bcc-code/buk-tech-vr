@@ -13,9 +13,13 @@ namespace Buk.AgeOfWar
     private System.Random random = new System.Random();
     private IEnumerator<Spawn> spawner;
     private TextMeshPro scoreBoard;
+    private float startTime = 0f;
+
+    public float GameTime { get => Time.fixedTime - startTime; }
 
     public void Awake()
     {
+      startTime = Time.fixedTime;
       for (var i = EnemyPrefabs.Count - 1; i >= 0; i--)
       {
         var prefab = EnemyPrefabs[i];
@@ -42,7 +46,7 @@ namespace Buk.AgeOfWar
 
     public void Update()
     {
-      scoreBoard.text = $"Time: {Time.fixedTime / 3600:00}:{Time.fixedTime / 60 % 3600:00}:{(int)Time.fixedTime % 60:00}";
+      scoreBoard.text = $"Time: {GameTime / 3600:00}:{GameTime / 60 % 3600:00}:{(int)GameTime % 60:00}";
     }
 
     public void TargetDied(Team team) {
